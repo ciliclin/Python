@@ -18,7 +18,8 @@ copy_vim_dir() {
 	if [ -d /root/.vim ]; then
 		mv /root/.vim /root/.vim.bak
 	fi
-	cat vim.bz2.parta* > vim.bz2#Single file limitation under 100MB for Github
+	cat vim.bz2.parta* > vim.bz2
+	#Single file limitation under 100MB for Github
 	cd ~
 	tar jxvf $WORK_PATH/vim.bz2
 	echo
