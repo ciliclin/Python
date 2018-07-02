@@ -18,8 +18,9 @@ copy_vim_dir() {
 	if [ -d /root/.vim ]; then
 		mv /root/.vim /root/.vim.bak
 	fi
+	cat vim.bz2.parta* > vim.bz2#Single file limitation under 100MB for Github
 	cd ~
-	tar xvf $WORK_PATH/vim.tar
+	tar jxvf $WORK_PATH/vim.bz2
 	echo
 }
 
@@ -30,7 +31,7 @@ echo "Refer to https://blog.csdn.net/jeff_liu_sky_/article/details/53955888"
 cp $WORK_PATH/.vimrc ~/
 
 copy_vim_dir
-install_youcomleteme
+#install_youcomleteme
 
 echo
 echo "Please run \"PluginInstall\" in vim"
